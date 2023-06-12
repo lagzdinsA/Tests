@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Ramis extends JFrame implements KeyListener {
+	
 	static boolean wNospiests;
 	static boolean sNospiests;
 	static boolean enterNospiests;
@@ -22,9 +23,9 @@ public class Ramis extends JFrame implements KeyListener {
 		this.setVisible(true);
 		sakums(this);
  }
+ 
 public static void sakums(JFrame ramis) {
-	int option;
-	boolean turpinat = false;
+	int izvele=0;
 	new Font("Liels", Font.PLAIN, 40);
 	new Font("Videjs", Font.PLAIN, 25);
 	
@@ -52,22 +53,74 @@ public static void sakums(JFrame ramis) {
 	Izziet.setFont(new Font("Videjs", Font.PLAIN, 25));
 	Izziet.setForeground(Color.WHITE);
 	
-	JLabel Raksturojums= new JLabel();
-	JLabel Atpakal= new JLabel();
 	ramis.add(Tituls);
 	ramis.add(Starts);
 	ramis.add(Opcijas);
 	ramis.add(Izziet);
+	
+	
 	do {
+	do {
+		if(wNospiests==true) {
+			izvele--;
+			wNospiests=false;
+		}
+		if(sNospiests==true) {
+			izvele++;
+			sNospiests=false;
+		}
 		
-	}while(turpinat!=true);
+		if(izvele<0) {
+			izvele=0;
+		}
+		if(izvele>2) {
+			izvele=2;
+		}
+		
+		
+		switch(izvele) {
+		case 0:
+			Starts.setText("Sakt testu <");
+			Opcijas.setText("Opcijas");
+			Izziet.setText("Izziet");
+			break;
+		case 1:
+			Starts.setText("Sakt testu");
+			Opcijas.setText("Opcijas <");
+			Izziet.setText("Izziet");
+			break;
+		case 2:
+			Starts.setText("Sakt testu");
+			Opcijas.setText("Opcijas");
+			Izziet.setText("Izziet <");
+			break;
+		}
+	}while(enterNospiests==false);
+	
+	
+	switch(izvele) {
+	case 0:
+jautajumi(ramis);
+		break;
+	case 1:
+paskaidrojums(ramis);
+		break;
+	case 2:
+		System.exit(0);
+		break;
+	}
+	}while(1==2);
 }
-public static void jautajumi() {
+public static void paskaidrojums(JFrame ramis) {
 	
 }
-public static void atbildes() {
+public static void jautajumi(JFrame ramis) {
 	
 }
+public static void atbildes(JFrame ramis) {
+	
+}
+
 @Override
 public void keyTyped(KeyEvent e) {
 	// TODO Auto-generated method stub
