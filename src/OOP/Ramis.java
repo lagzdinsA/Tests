@@ -187,11 +187,11 @@ public static void jautajumi(JFrame ramis) {
 	
 	SwingUtilities.updateComponentTreeUI(ramis);
 	
-	int[] punkti = {0,0,0,0,0,0,0,0,0,0};
+	int[] atbildes = {0,0,0,0,0,0,0,0,0,0};
 	int jautajums;
 	int izvele=0;
 	String[] jautajumi = {"Ka tevi sauc?", "Cik tu esi garšs?"};
-	String[][] atbildes = { {"bobs","roks","tops","mobs"}, {"123m","2km","3mm","4cm"} };
+	String[][] opcijas = { {"bobs","roks","tops","mobs"}, {"123m","2km","3mm","4cm"} };
 
 	
 	JLabel Numurs= new JLabel();
@@ -205,20 +205,24 @@ public static void jautajumi(JFrame ramis) {
 	Jautajums.setBounds(50,-150,500,500);
 	
 	JLabel Atbilde1= new JLabel();
-	Jautajums.setForeground(Color.WHITE);
-	Jautajums.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde1.setForeground(Color.WHITE);
+	Atbilde1.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde1.setBounds(100,150,250,250);
 	
 	JLabel Atbilde2= new JLabel();
-	Jautajums.setForeground(Color.WHITE);
-	Jautajums.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde2.setForeground(Color.WHITE);
+	Atbilde2.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde2.setBounds(100,250,250,250);
 	
 	JLabel Atbilde3= new JLabel();
-	Jautajums.setForeground(Color.WHITE);
-	Jautajums.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde3.setForeground(Color.WHITE);
+	Atbilde3.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde3.setBounds(300,150,250,250);
 	
 	JLabel Atbilde4= new JLabel();
-	Jautajums.setForeground(Color.WHITE);
-	Jautajums.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde4.setForeground(Color.WHITE);
+	Atbilde4.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde4.setBounds(300,250,250,250);
 	
 	ramis.add(Numurs);
 	ramis.add(Jautajums);
@@ -229,62 +233,79 @@ public static void jautajumi(JFrame ramis) {
 	for (jautajums=0;jautajums<10;jautajums++) {
 		Numurs.setText(jautajums+".");
 		Jautajums.setText(jautajumi[jautajums]);
-		if(wNospiests==true) {
-			izvele--;
-		}
-		if(sNospiests==true) {
-			izvele++;
-		}
-		if(izvele<0) {
-			izvele=0;
-		}
-		if(izvele>3) {
-			izvele=3;
-		}
 		do {
+			if(wNospiests==true) {
+				izvele--;
+				wNospiests=false;
+			}
+			if(sNospiests==true) {
+				izvele++;
+				sNospiests=false;
+			}
+			if(izvele<0) {
+				izvele=0;
+			}
+			if(izvele>3) {
+				izvele=3;
+			}
 			enterNospiests=false;
 			switch(izvele) {
 			case 0:
-				Atbilde1.setText(atbildes[jautajums][0]+" <");
-				Atbilde2.setText(atbildes[jautajums][1]+"");
-				Atbilde3.setText(atbildes[jautajums][2]+"");
-				Atbilde4.setText(atbildes[jautajums][3]+"");
+				Atbilde1.setText(opcijas[jautajums][0]+" <");
+				Atbilde2.setText(opcijas[jautajums][1]+"");
+				Atbilde3.setText(opcijas[jautajums][2]+"");
+				Atbilde4.setText(opcijas[jautajums][3]+"");
+				System.out.println(izvele+" pirmais");
 				if (enterNospiests==true){
+					atbildes[jautajums]=1;
 				}
 				break;
 			case 1:
-				Atbilde1.setText(atbildes[jautajums][0]+"");
-				Atbilde2.setText(atbildes[jautajums][1]+" <");
-				Atbilde3.setText(atbildes[jautajums][2]+"");
-				Atbilde4.setText(atbildes[jautajums][3]+"");
+				System.out.println(izvele+" otrais");
+				Atbilde1.setText(opcijas[jautajums][0]+"");
+				Atbilde2.setText(opcijas[jautajums][1]+" <");
+				Atbilde3.setText(opcijas[jautajums][2]+"");
+				Atbilde4.setText(opcijas[jautajums][3]+"");
 				if (enterNospiests==true){
+					atbildes[jautajums]=2;
 				}
 				break;
 			case 2:
-				Atbilde1.setText(atbildes[jautajums][0]+"");
-				Atbilde2.setText(atbildes[jautajums][1]+"");
-				Atbilde3.setText(atbildes[jautajums][2]+" <");
-				Atbilde4.setText(atbildes[jautajums][3]+"");
+				Atbilde1.setText(opcijas[jautajums][0]+"");
+				Atbilde2.setText(opcijas[jautajums][1]+"");
+				Atbilde3.setText(opcijas[jautajums][2]+" <");
+				Atbilde4.setText(opcijas[jautajums][3]+"");
 				if (enterNospiests==true){
+					atbildes[jautajums]=3;
 				}
 				break;
 			case 3:
-				Atbilde1.setText(atbildes[jautajums][0]+"");
-				Atbilde2.setText(atbildes[jautajums][1]+"");
-				Atbilde3.setText(atbildes[jautajums][2]+"");
-				Atbilde4.setText(atbildes[jautajums][3]+" <");
+				Atbilde1.setText(opcijas[jautajums][0]+"");
+				Atbilde2.setText(opcijas[jautajums][1]+"");
+				Atbilde3.setText(opcijas[jautajums][2]+"");
+				Atbilde4.setText(opcijas[jautajums][3]+" <");
 				if (enterNospiests==true){
+					atbildes[jautajums]=4;
 				}
 				break;
 			}
 		}while(enterNospiests==false);
 		enterNospiests=false;
 	}
+	rezultati(ramis, atbildes);
 }
 
 
-public static void atbildes(JFrame ramis) {
-	
+public static void rezultati(JFrame ramis, int[] atbildes) {
+	int[] parAtbildes= {1,2,1,4,3,3,2,4,1,4};
+	int[] skaititajs= {0,0,0,0,0,0,0,0,0,0};
+	int punkti=0;
+	for(int i =0; i<11;i++) {
+		if(atbildes[i]==parAtbildes[i]) {
+			skaititajs[i]=1;
+			punkti++;
+		}
+	}
 }
 
 
