@@ -190,10 +190,22 @@ public static void jautajumi(JFrame ramis) {
 	int[] atbildes = {0,0,0,0,0,0,0,0,0,0};
 	int jautajums;
 	int izvele=0;
-	String[] jautajumi = {"Ka tevi sauc?", "Cik tu esi garšs?"};
-	String[][] opcijas = { {"bobs","roks","tops","mobs"}, {"123m","2km","3mm","4cm"} };
-
-	
+	String[] jautajumi = {"Kurš no šiem ir objekts?", "Kas ir objekta attribūts?","Kas ir objekta metode?",
+			"Kura no šim NAV klase?","Kurš no šiem NAV klases vārds?","Kurš no šiem NAV klases objekts?",
+			"Kādu funkciju pilda getteri?","Kādu funkciju pilda setteri?",
+			"Kādam jābūt konstruktora nosaukumama?", "Kurš no šiem ir konstruktora izsaucējs?",};
+	String[][] opcijas = { 
+			{"Suns","Skriet","15cm","gulēt"}, 
+			{"Objekta izsaucējs","Informācija par objektu","Rīcība ko objekts var veikt","Objekta nosaukums"},
+			{"Darbība ko objekts var veikt","Objekta izdzēsējs","Darbiba kuru objekts var nozagt","Objekta nosaukums"},
+			{"public class Main","class Ramis extends JFrame","final class A","public void jautajumi()"},
+			{"Dārzeņi","Skolēni","Burkāns","Māšīnas"},
+			{"Nīderlande","Austiņa","Valstis","Valentīns"},
+			{"Tie pārbauda klases","Tie atgriež mainīgo","Ļauj lietotājam ievadīt informāciju","Tie pārstāj programmu"},
+			{"Tie apzog objektus","Tie izveido konstruktorus","Tie iekapsule mainīgo","Tie nosaka mainīgo vērtības"},
+			{"Vienādam ar klases vārdu","Ar mazajiem burtiem","Bez simboliem","Tādām kā pakas nosaukumam"},
+			{"import java.awt.Color;","public class Main","static void jautajumi(int x)","Main myObj = new Main();"}};
+	//1,2,1,4,3,3,2,4,1,4
 	JLabel Numurs= new JLabel();
 	Numurs.setForeground(Color.WHITE);
 	Numurs.setFont(new Font("", Font.PLAIN, 20));
@@ -202,27 +214,27 @@ public static void jautajumi(JFrame ramis) {
 	JLabel Jautajums= new JLabel();
 	Jautajums.setForeground(Color.WHITE);
 	Jautajums.setFont(new Font("", Font.PLAIN, 30));
-	Jautajums.setBounds(50,-150,500,500);
+	Jautajums.setBounds(15,-200,600,600);
 	
 	JLabel Atbilde1= new JLabel();
 	Atbilde1.setForeground(Color.WHITE);
 	Atbilde1.setFont(new Font("", Font.PLAIN, 15));
-	Atbilde1.setBounds(100,150,250,250);
+	Atbilde1.setBounds(25,150,250,250);
 	
 	JLabel Atbilde2= new JLabel();
 	Atbilde2.setForeground(Color.WHITE);
 	Atbilde2.setFont(new Font("", Font.PLAIN, 15));
-	Atbilde2.setBounds(100,250,250,250);
+	Atbilde2.setBounds(25,250,250,250);
 	
 	JLabel Atbilde3= new JLabel();
 	Atbilde3.setForeground(Color.WHITE);
 	Atbilde3.setFont(new Font("", Font.PLAIN, 15));
-	Atbilde3.setBounds(300,150,250,250);
+	Atbilde3.setBounds(250,150,250,250);
 	
 	JLabel Atbilde4= new JLabel();
 	Atbilde4.setForeground(Color.WHITE);
 	Atbilde4.setFont(new Font("", Font.PLAIN, 15));
-	Atbilde4.setBounds(300,250,250,250);
+	Atbilde4.setBounds(250,250,250,250);
 	
 	ramis.add(Numurs);
 	ramis.add(Jautajums);
@@ -255,13 +267,13 @@ public static void jautajumi(JFrame ramis) {
 				Atbilde2.setText(opcijas[jautajums][1]+"");
 				Atbilde3.setText(opcijas[jautajums][2]+"");
 				Atbilde4.setText(opcijas[jautajums][3]+"");
-				System.out.println(izvele+" pirmais");
+				//System.out.println(izvele+" pirmais");
 				if (enterNospiests==true){
 					atbildes[jautajums]=1;
 				}
 				break;
 			case 1:
-				System.out.println(izvele+" otrais");
+				//System.out.println(izvele+" otrais");
 				Atbilde1.setText(opcijas[jautajums][0]+"");
 				Atbilde2.setText(opcijas[jautajums][1]+" <");
 				Atbilde3.setText(opcijas[jautajums][2]+"");
@@ -297,11 +309,12 @@ public static void jautajumi(JFrame ramis) {
 
 
 public static void rezultati(JFrame ramis, int[] atbildes) {
+	System.out.println(" pirmais");
 	int[] parAtbildes= {1,2,1,4,3,3,2,4,1,4};
 	int[] skaititajs= {0,0,0,0,0,0,0,0,0,0};
 	int punkti=0;
 	
-	for(int i =0; i<11;i++) {
+	for(int i =0; i<10;i++) {
 		if(atbildes[i]==parAtbildes[i]) {
 			skaititajs[i]=1;
 			punkti++;
