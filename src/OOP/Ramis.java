@@ -32,12 +32,6 @@ public class Ramis extends JFrame implements KeyListener {
  }
  
 public static void sakums(JFrame ramis) {
-	
-	SwingUtilities.updateComponentTreeUI(ramis);
-	ramis.invalidate();
-	ramis.validate();
-	ramis.repaint();
-	
 	int izvele=0;
 	JLabel Tituls= new JLabel();
 	Tituls.setText("Tests-OOP");
@@ -71,6 +65,7 @@ public static void sakums(JFrame ramis) {
 	ramis.add(Opcijas);
 	ramis.add(Izziet);
 	ramis.add(tests);
+	SwingUtilities.updateComponentTreeUI(ramis);
 	
 	do {
 		if(wNospiests==true) {
@@ -759,19 +754,19 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 	paLabi.setForeground(Color.WHITE);
 	paLabi.setFont(new Font("", Font.PLAIN, 30));
 	paLabi.setText("[D] >");
-	paLabi.setBounds(250,250,250,250);
+	paLabi.setBounds(420,300,250,250);
 	
 	JLabel paKreisi= new JLabel();
 	paKreisi.setForeground(Color.WHITE);
 	paKreisi.setFont(new Font("", Font.PLAIN, 30));
 	paKreisi.setText("< [A]");
-	paKreisi.setBounds(250,250,250,250);
+	paKreisi.setBounds(0,300,250,250);
 	
 	JLabel Atpakal= new JLabel();
 	Atpakal.setForeground(Color.WHITE);
 	Atpakal.setFont(new Font("", Font.PLAIN, 30));
 	Atpakal.setText("Atpakal [Esc]");
-	Atpakal.setBounds(250,250,250,250);
+	Atpakal.setBounds(150,300,250,250);
 	
 	Numurs.setText(jautajums+".");
 	Jautajums.setText(jautajumi[jautajums]);
