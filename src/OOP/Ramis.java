@@ -505,6 +505,18 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 				jaut1.setText("Kurš no šiem ir objekts? <");
 				jaut2.setText("Kas ir objekta attribūts?");	
 				if (enterNospiests==true){
+					ramis.remove(Tituls);
+					ramis.remove(jaut1);
+					ramis.remove(jaut2);
+					ramis.remove(jaut3);
+					ramis.remove(jaut4);
+					ramis.remove(jaut5);
+					ramis.remove(jaut6);
+					ramis.remove(jaut7);
+					ramis.remove(jaut8);
+					ramis.remove(jaut9);
+					ramis.remove(jaut10);
+					ramis.remove(Atpakal);
 					jautRezultats(ramis, 0, skaititajs, atbildes);
 			}
 			break;
@@ -513,6 +525,18 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 				jaut2.setText("Kas ir objekta attribūts? <");	
 				jaut3.setText("Kas ir objekta metode?");
 				if (enterNospiests==true){
+					ramis.remove(Tituls);
+					ramis.remove(jaut1);
+					ramis.remove(jaut2);
+					ramis.remove(jaut3);
+					ramis.remove(jaut4);
+					ramis.remove(jaut5);
+					ramis.remove(jaut6);
+					ramis.remove(jaut7);
+					ramis.remove(jaut8);
+					ramis.remove(jaut9);
+					ramis.remove(jaut10);
+					ramis.remove(Atpakal);
 					jautRezultats(ramis, 1, skaititajs, atbildes);
 			}
 			break;
@@ -520,15 +544,39 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut2.setText("Kas ir objekta attribūts?");	
 			jaut3.setText("Kas ir objekta metode? <");
 			jaut4.setText("Kura no šim NAV klase?");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
+				jautRezultats(ramis, 2, skaititajs, atbildes);
 			}
-			jautRezultats(ramis, 2, skaititajs, atbildes);
 			break;
 		case 3:
 			jaut3.setText("Kas ir objekta metode?");
 			jaut4.setText("Kura no šim NAV klase? <");
 			jaut5.setText("Kurš no šiem NAV klases vārds?");
 			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
 				jautRezultats(ramis, 3, skaititajs, atbildes);
 			}
 			break;
@@ -537,6 +585,18 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut5.setText("Kurš no šiem NAV klases vārds? <");
 			jaut6.setText("Kurš no šiem NAV klases objekts?");
 			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
 				jautRezultats(ramis, 4, skaititajs, atbildes);
 			}
 			break;
@@ -544,7 +604,19 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut5.setText("Kurš no šiem NAV klases vārds?");
 			jaut6.setText("Kurš no šiem NAV klases objekts? <");
 			jaut7.setText("Kādu funkciju pilda getteri?");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
 				jautRezultats(ramis, 5, skaititajs, atbildes);
 			}
 			break;
@@ -553,6 +625,18 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut7.setText("Kādu funkciju pilda getteri? <");
 			jaut8.setText("Kādu funkciju pilda setteri?");
 			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
 				jautRezultats(ramis, 6, skaititajs, atbildes);
 			}
 			break;
@@ -561,6 +645,18 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut8.setText("Kādu funkciju pilda setteri? <");
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama?");
 			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
 				jautRezultats(ramis, 7, skaititajs, atbildes);
 			}
 			break;
@@ -569,13 +665,37 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama? <");
 			jaut10.setText("Kurš no šiem ir konstruktora izsaucējs?");
 			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
 				jautRezultats(ramis, 8, skaititajs, atbildes);
 			}
 			break;
 		case 9:
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama?");
 			jaut10.setText("Kurš no šiem ir konstruktora izsaucējs? <");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				ramis.remove(Tituls);
+				ramis.remove(jaut1);
+				ramis.remove(jaut2);
+				ramis.remove(jaut3);
+				ramis.remove(jaut4);
+				ramis.remove(jaut5);
+				ramis.remove(jaut6);
+				ramis.remove(jaut7);
+				ramis.remove(jaut8);
+				ramis.remove(jaut9);
+				ramis.remove(jaut10);
+				ramis.remove(Atpakal);
 				jautRezultats(ramis, 9, skaititajs, atbildes);
 			}
 			break;
@@ -583,6 +703,10 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 	}while(1==1);
 }
 public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, int[] atbildes) {
+	SwingUtilities.updateComponentTreeUI(ramis);
+	int[] parAtbildes= {1,2,1,4,3,3,2,4,1,4};
+	if(parAtbildes[jautajums]==1) {
+	}
 	
 	String[] jautajumi = {"Kurš no šiem ir objekts?", "Kas ir objekta attribūts?","Kas ir objekta metode?",
 			"Kura no šim NAV klase?","Kurš no šiem NAV klases vārds?","Kurš no šiem NAV klases objekts?",
@@ -633,19 +757,19 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 	
 	JLabel paLabi= new JLabel();
 	paLabi.setForeground(Color.WHITE);
-	paLabi.setFont(new Font("", Font.PLAIN, 50));
+	paLabi.setFont(new Font("", Font.PLAIN, 30));
 	paLabi.setText("[D] >");
 	paLabi.setBounds(250,250,250,250);
 	
 	JLabel paKreisi= new JLabel();
 	paKreisi.setForeground(Color.WHITE);
-	paKreisi.setFont(new Font("", Font.PLAIN, 50));
+	paKreisi.setFont(new Font("", Font.PLAIN, 30));
 	paKreisi.setText("< [A]");
 	paKreisi.setBounds(250,250,250,250);
 	
 	JLabel Atpakal= new JLabel();
 	Atpakal.setForeground(Color.WHITE);
-	Atpakal.setFont(new Font("", Font.PLAIN, 40));
+	Atpakal.setFont(new Font("", Font.PLAIN, 30));
 	Atpakal.setText("Atpakal [Esc]");
 	Atpakal.setBounds(250,250,250,250);
 	
@@ -655,9 +779,57 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 	Atbilde2.setText(opcijas[jautajums][1]+"");
 	Atbilde3.setText(opcijas[jautajums][2]+"");
 	Atbilde4.setText(opcijas[jautajums][3]+"");
-	
+	ramis.add(Numurs);
+	ramis.add(Jautajums);
+	ramis.add(Atbilde1);
+	ramis.add(Atbilde2);
+	ramis.add(Atbilde3);
+	ramis.add(Atbilde4);
+	ramis.add(paLabi);
+	ramis.add(paKreisi);
+	ramis.add(Atpakal);
+	SwingUtilities.updateComponentTreeUI(ramis);
 	do {
-		
+		if(parAtbildes[jautajums]==1) {
+			Atbilde1.setForeground(Color.GREEN);
+		}
+		if(parAtbildes[jautajums]==2) {
+			Atbilde2.setForeground(Color.GREEN);
+		}
+		if(parAtbildes[jautajums]==3) {
+			Atbilde3.setForeground(Color.GREEN);
+		}
+		if(parAtbildes[jautajums]==4) {
+			Atbilde4.setForeground(Color.GREEN);
+		}
+		if(atbildes[jautajums]==1) {
+			if(parAtbildes[jautajums]==1) {
+				Atbilde1.setForeground(Color.GREEN);
+			}else {
+				Atbilde1.setForeground(Color.RED);
+			}
+		}
+		if(atbildes[jautajums]==2) {
+			if(parAtbildes[jautajums]==2) {
+				Atbilde2.setForeground(Color.GREEN);
+			}else {
+				Atbilde2.setForeground(Color.RED);
+			}
+		}
+		if(atbildes[jautajums]==3) {
+			if(parAtbildes[jautajums]==3) {
+				Atbilde3.setForeground(Color.GREEN);
+			}else {
+				Atbilde3.setForeground(Color.RED);
+			}
+		}
+		if(atbildes[jautajums]==4) {
+			if(parAtbildes[jautajums]==4) {
+				Atbilde4.setForeground(Color.GREEN);
+			}else {
+				Atbilde4.setForeground(Color.RED);
+			}
+		}
 		if(escNospiests==true) {
 			escNospiests=false;
 			ramis.remove(Numurs);
@@ -685,6 +857,10 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 			Atbilde2.setText(opcijas[jautajums][1]+"");
 			Atbilde3.setText(opcijas[jautajums][2]+"");
 			Atbilde4.setText(opcijas[jautajums][3]+"");
+			Atbilde1.setForeground(Color.WHITE);
+			Atbilde2.setForeground(Color.WHITE);
+			Atbilde3.setForeground(Color.WHITE);
+			Atbilde4.setForeground(Color.WHITE);
 		}
 		if(aNospiests==true) {
 			if(jautajums==0) {
@@ -699,8 +875,11 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 			Atbilde2.setText(opcijas[jautajums][1]+"");
 			Atbilde3.setText(opcijas[jautajums][2]+"");
 			Atbilde4.setText(opcijas[jautajums][3]+"");
+			Atbilde1.setForeground(Color.WHITE);
+			Atbilde2.setForeground(Color.WHITE);
+			Atbilde3.setForeground(Color.WHITE);
+			Atbilde4.setForeground(Color.WHITE);
 		}
-		
 	}while(1==1);
 }
 
@@ -726,7 +905,7 @@ public void keyPressed(KeyEvent e) {
 	case 68:
 		dNospiests=true;
 		break;
-	case 52:
+	case 65:
 		aNospiests=true;
 		break;
 	case 10: 
