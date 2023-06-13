@@ -6,9 +6,10 @@ Atpakal ar Esc
 
 **Uzdevumu saraksts:**
 - [x] Izveidot ekranu
-- [ ] Izveidot sakumu
-- [ ] Implementēt W, S, Enter un Esc kustības
-- [ ] Izveidot opcijas
-- [ ] Izveidot jautājumus
+- [x] Izveidot sakumu
+- [x] Implementēt W, S, Enter un Esc kustības
+- [x] Izveidot opcijas
+- [x] Izveidot jautājumus
+- [ ] Izdomat jautajumus
 - [ ] Izveidot atbilžu sarakstu
 - [ ] Pievienot mūziku
