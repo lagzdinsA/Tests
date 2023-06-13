@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" modified="2023-06-12T17:44:12.300Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0" etag="F8dvh21mMqUOOWDeZEL4" version="21.3.8" type="device">
+  <diagram name="Page-1" id="oAIKAtGzBGApwbARPIJZ">
+    <mxGraphModel dx="1393" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="H4asqveJr-vSi-HOZvEu-1" value="Windows OS lietotājs" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="120" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-2" target="H4asqveJr-vSi-HOZvEu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-2" target="H4asqveJr-vSi-HOZvEu-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-2" target="H4asqveJr-vSi-HOZvEu-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-2" value="Startet testu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="330" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-3" value="Aizvert testu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="460" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-6" value="Apskatit paskaidrojumu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="460" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-8" target="H4asqveJr-vSi-HOZvEu-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="370" />
+              <mxPoint x="490" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-8" target="H4asqveJr-vSi-HOZvEu-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-8" target="H4asqveJr-vSi-HOZvEu-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-8" target="H4asqveJr-vSi-HOZvEu-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="370" />
+              <mxPoint x="490" y="455" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-8" target="H4asqveJr-vSi-HOZvEu-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="H4asqveJr-vSi-HOZvEu-8" target="H4asqveJr-vSi-HOZvEu-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="415" y="270" />
+              <mxPoint x="275" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-8" value="Sakt testu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="330" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-10" value="atbilde A" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="260" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-11" value="atbilde B" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="310" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-12" value="atbilde C" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="370" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-13" value="atbilde D" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="430" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-18" value="Apskatit atbilžu rezultātus" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="130" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H4asqveJr-vSi-HOZvEu-20" value="Sākt no jauna" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="210" width="110" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
