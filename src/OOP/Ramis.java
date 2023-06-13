@@ -300,12 +300,120 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 	int[] parAtbildes= {1,2,1,4,3,3,2,4,1,4};
 	int[] skaititajs= {0,0,0,0,0,0,0,0,0,0};
 	int punkti=0;
+	
 	for(int i =0; i<11;i++) {
 		if(atbildes[i]==parAtbildes[i]) {
 			skaititajs[i]=1;
 			punkti++;
 		}
 	}
+	
+	JLabel jaut1= new JLabel();
+	if(skaititajs[0]==1) {
+		jaut1.setForeground(Color.GREEN);
+	}else {
+		jaut1.setForeground(Color.RED);
+	}
+	jaut1.setFont(new Font("", Font.PLAIN, 20));
+	jaut1.setText("Jautajums 1.");
+	jaut1.setBounds(15,-10,100,100);
+	
+	JLabel jaut2= new JLabel();
+	if(skaititajs[1]==1) {
+		jaut2.setForeground(Color.GREEN);
+	}else {
+		jaut2.setForeground(Color.RED);
+	}
+	jaut2.setFont(new Font("", Font.PLAIN, 20));
+	jaut2.setText("Jautajums 2.");
+	jaut2.setBounds(15,-10,100,100);
+	
+	JLabel jaut3= new JLabel();
+	if(skaititajs[2]==1) {
+		jaut3.setForeground(Color.GREEN);
+	}else {
+		jaut3.setForeground(Color.RED);
+	}
+	jaut3.setFont(new Font("", Font.PLAIN, 20));
+	jaut3.setText("Jautajums 3.");
+	jaut3.setBounds(15,-10,100,100);
+	
+	JLabel jaut4= new JLabel();
+	if(skaititajs[3]==1) {
+		jaut4.setForeground(Color.GREEN);
+	}else {
+		jaut4.setForeground(Color.RED);
+	}
+	jaut4.setFont(new Font("", Font.PLAIN, 20));
+	jaut4.setText("Jautajums 4.");
+	jaut4.setBounds(15,-10,100,100);
+	
+	JLabel jaut5= new JLabel();
+	if(skaititajs[4]==1) {
+		jaut5.setForeground(Color.GREEN);
+	}else {
+		jaut5.setForeground(Color.RED);
+	}
+	jaut5.setFont(new Font("", Font.PLAIN, 20));
+	jaut5.setText("Jautajums 5.");
+	jaut5.setBounds(15,-10,100,100);
+	
+	JLabel jaut6= new JLabel();
+	if(skaititajs[5]==1) {
+		jaut6.setForeground(Color.GREEN);
+	}else {
+		jaut6.setForeground(Color.RED);
+	}
+	jaut6.setFont(new Font("", Font.PLAIN, 20));
+	jaut6.setText("Jautajums 6.");
+	jaut6.setBounds(15,-10,100,100);
+	
+	JLabel jaut7= new JLabel();
+	if(skaititajs[6]==1) {
+		jaut7.setForeground(Color.GREEN);
+	}else {
+		jaut7.setForeground(Color.RED);
+	}
+	jaut7.setFont(new Font("", Font.PLAIN, 20));
+	jaut7.setText("Jautajums 7.");
+	jaut7.setBounds(15,-10,100,100);
+	
+	JLabel jaut8= new JLabel();
+	if(skaititajs[7]==1) {
+		jaut8.setForeground(Color.GREEN);
+	}else {
+		jaut8.setForeground(Color.RED);
+	}
+	jaut8.setFont(new Font("", Font.PLAIN, 20));
+	jaut8.setText("Jautajums 8.");
+	jaut8.setBounds(15,-10,100,100);
+	
+	JLabel jaut9= new JLabel();
+	if(skaititajs[8]==1) {
+		jaut9.setForeground(Color.GREEN);
+	}else {
+		jaut9.setForeground(Color.RED);
+	}
+	jaut9.setFont(new Font("", Font.PLAIN, 20));
+	jaut9.setText("Jautajums 9.");
+	jaut9.setBounds(15,-10,100,100);
+	
+	JLabel jaut10= new JLabel();
+	if(skaititajs[9]==1) {
+		jaut10.setForeground(Color.GREEN);
+	}else {
+		jaut10.setForeground(Color.RED);
+	}
+	jaut10.setFont(new Font("", Font.PLAIN, 20));
+	jaut10.setText("Jautajums 10.");
+	jaut10.setBounds(15,-10,100,100);
+	
+	JLabel Atpakal= new JLabel();
+	Atpakal.setForeground(Color.WHITE);
+	Atpakal.setFont(new Font("", Font.PLAIN, 20));
+	jaut1.setText("Atpakal [Esc]");
+	Atpakal.setBounds(15,-10,100,100);
+	
 }
 
 
