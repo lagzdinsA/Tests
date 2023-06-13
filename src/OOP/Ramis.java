@@ -24,13 +24,16 @@ public class Ramis extends JFrame implements KeyListener {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(500,500);
 		this.getContentPane().setBackground(Color.black);
-		//this.setLayout(null);
+		this.setLayout(null);
 		this.setVisible(true);
 		sakums(this);
  }
  
 public static void sakums(JFrame ramis) {
 	SwingUtilities.updateComponentTreeUI(ramis);
+	ramis.invalidate();
+	ramis.validate();
+	ramis.repaint();
 	int izvele=0;
 	JLabel Tituls= new JLabel();
 	Tituls.setText("Tests-OOP");
@@ -57,12 +60,13 @@ public static void sakums(JFrame ramis) {
 	Izziet.setForeground(Color.WHITE);
 	
 	JLabel tests= new JLabel();
+	SwingUtilities.updateComponentTreeUI(ramis);
+	ramis.revalidate();
 	ramis.add(Tituls);
 	ramis.add(Starts);
 	ramis.add(Opcijas);
 	ramis.add(Izziet);
 	ramis.add(tests);
-	
 	
 	do {
 		if(wNospiests==true) {
@@ -104,6 +108,7 @@ public static void sakums(JFrame ramis) {
 				ramis.remove(Starts);
 				ramis.remove(Opcijas);
 				ramis.remove(Izziet);
+				ramis.revalidate();
 				paskaidrojums(ramis);
 			}
 			break;
@@ -123,44 +128,54 @@ public static void sakums(JFrame ramis) {
 
 public static void paskaidrojums(JFrame ramis) {
 	
-	ramis.removeAll();//or remove(JComponent)
-	ramis.revalidate();
-	ramis.repaint();
 	SwingUtilities.updateComponentTreeUI(ramis);
 	JLabel Tituls= new JLabel();
 	Tituls.setText("Paskaidrojums");
-	Tituls.setBounds(200,100,200,200);
+	Tituls.setBounds(150,0,200,200);
 	Tituls.setForeground(Color.WHITE);
 	Tituls.setFont(new Font("", Font.PLAIN, 30));
 	
 	JLabel Paskaidrojums= new JLabel();
-	Paskaidrojums.setText("Test par OOP. Kusties ar W un S.");
-	Paskaidrojums.setBounds(20,100,200,200);
+	Paskaidrojums.setText("Šī programma ir tests, kurš pārbaudīs tavas zināšanas par OOP.");
+	Paskaidrojums.setBounds(20,-100,500,500);
 	Paskaidrojums.setForeground(Color.WHITE);
 	Paskaidrojums.setFont(new Font("", Font.PLAIN, 14));
 	
+	JLabel Paskaidrojums2= new JLabel();
+	Paskaidrojums2.setText("Kusties ar W un S, apstiprini ar ENTER.");
+	Paskaidrojums2.setBounds(20,-50,500,500);
+	Paskaidrojums2.setForeground(Color.WHITE);
+	Paskaidrojums2.setFont(new Font("", Font.PLAIN, 14));
+	
 	JLabel Turpinat= new JLabel();
 	Turpinat.setText("Esc lai ietu atpakaļ");
-	Turpinat.setBounds(200,200,200,200);
+	Turpinat.setBounds(25,300,200,200);
 	Turpinat.setForeground(Color.WHITE);
 	Turpinat.setFont(new Font("", Font.PLAIN, 20));
-	JLabel tests= new JLabel();
+	//JLabel tests= new JLabel();
 	ramis.add(Tituls);
 	ramis.add(Paskaidrojums);
+	ramis.add(Paskaidrojums2);
 	ramis.add(Turpinat);
-	ramis.add(tests);
-	ramis.removeAll();//or remove(JComponent)
-	ramis.revalidate();
+	ramis.validate();
+	ramis.invalidate();
+	ramis.validate();
 	ramis.repaint();
+	//ramis.add(tests);
+	//Tituls.setText("tata");
+	do {
+	Tituls.setText("Paskaidrojums");
+	Paskaidrojums.setText("Šī programma ir tests, kurš pārbaudīs tavas zināšanas par OOP.");
+	Paskaidrojums2.setText("Kusties ar W un S, apstiprini ar ENTER.");
+	Turpinat.setText("Esc lai ietu atpakaļ");
+	}while(escNospiests==false);
+	Tituls.setText(" ");
+	Paskaidrojums.setText(" ");
+	Paskaidrojums2.setText(" ");
+	Turpinat.setText(" ");	
+	escNospiests=false;
+	sakums(ramis);	
 	SwingUtilities.updateComponentTreeUI(ramis);		
-			if(escNospiests==true) {
-				escNospiests=false;
-				ramis.remove(Tituls);
-				ramis.remove(Paskaidrojums);
-				ramis.remove(Turpinat);
-				SwingUtilities.updateComponentTreeUI(ramis);	
-				sakums(ramis);	
-			}
 		}
 
 
