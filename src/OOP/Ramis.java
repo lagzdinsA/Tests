@@ -14,8 +14,10 @@ import javax.swing.SwingUtilities;
 
 public class Ramis extends JFrame implements KeyListener {
 	
+	static boolean aNospiests;
 	static boolean wNospiests;
 	static boolean sNospiests;
+	static boolean dNospiests;
 	static boolean enterNospiests;
 	static boolean escNospiests;
 	
@@ -171,7 +173,7 @@ public static void paskaidrojums(JFrame ramis) {
 	Tituls.setText("Paskaidrojums");
 	Paskaidrojums.setText("Šī programma ir tests, kurš pārbaudīs tavas zināšanas par OOP.");
 	Paskaidrojums2.setText("Kusties ar W un S, apstiprini ar ENTER.");
-	Turpinat.setText("Esc lai ietu atpakaļ");
+	Turpinat.setText("Atpakal [Esc]");
 	}while(escNospiests==false);
 	Tituls.setText(" ");
 	Paskaidrojums.setText(" ");
@@ -310,12 +312,10 @@ public static void jautajumi(JFrame ramis) {
 	
 	ramis.remove(Jautajums);
 	ramis.remove(Atbilde1);
-	//jaut1.setText("Kurš no šiem ir objekts?");
 	ramis.remove(Atbilde2);
 	ramis.remove(Atbilde3);
 	ramis.remove(Atbilde4);
 	ramis.remove(Numurs);
-	ramis.revalidate();
 	rezultati(ramis, atbildes);
 }
 
@@ -335,12 +335,12 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 		}
 	}
 	
-	
+
 	JLabel Tituls= new JLabel();
 	Tituls.setForeground(Color.WHITE);
 	Tituls.setFont(new Font("", Font.PLAIN, 35));
-	Tituls.setText("Rezultāti");
-	Tituls.setBounds(150,-25,150,150);
+	Tituls.setText("Rezultāti - "+punkti+"/10");
+	Tituls.setBounds(130,-55,250,250);
 	
 	JLabel jaut1= new JLabel();
 	if(skaititajs[0]==1) {
@@ -445,8 +445,8 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 	JLabel Atpakal= new JLabel();
 	Atpakal.setForeground(Color.WHITE);
 	Atpakal.setFont(new Font("", Font.PLAIN, 20));
-	Atpakal.setText("Atpakal [Esc]");
-	Atpakal.setBounds(330,300,200,200);
+	Atpakal.setText("Uz sakumu [Esc]");
+	Atpakal.setBounds(320,310,200,200);
 	
 	ramis.add(Tituls);
 	ramis.add(jaut1);
@@ -478,7 +478,18 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 		}
 		if(escNospiests==true) {
 			escNospiests=false;
-			SwingUtilities.updateComponentTreeUI(ramis);
+			ramis.remove(Tituls);
+			ramis.remove(jaut1);
+			ramis.remove(jaut2);
+			ramis.remove(jaut3);
+			ramis.remove(jaut4);
+			ramis.remove(jaut5);
+			ramis.remove(jaut6);
+			ramis.remove(jaut7);
+			ramis.remove(jaut8);
+			ramis.remove(jaut9);
+			ramis.remove(jaut10);
+			ramis.remove(Atpakal);
 			sakums(ramis);
 			
 		}
@@ -494,6 +505,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 				jaut1.setText("Kurš no šiem ir objekts? <");
 				jaut2.setText("Kas ir objekta attribūts?");	
 				if (enterNospiests==true){
+					jautRezultats(ramis, 0, skaititajs, atbildes);
 			}
 			break;
 		case 1:
@@ -501,6 +513,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 				jaut2.setText("Kas ir objekta attribūts? <");	
 				jaut3.setText("Kas ir objekta metode?");
 				if (enterNospiests==true){
+					jautRezultats(ramis, 1, skaititajs, atbildes);
 			}
 			break;
 		case 2:
@@ -509,19 +522,22 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut4.setText("Kura no šim NAV klase?");
 			if (enterNospiests==true){	
 			}
+			jautRezultats(ramis, 2, skaititajs, atbildes);
 			break;
 		case 3:
 			jaut3.setText("Kas ir objekta metode?");
 			jaut4.setText("Kura no šim NAV klase? <");
 			jaut5.setText("Kurš no šiem NAV klases vārds?");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				jautRezultats(ramis, 3, skaititajs, atbildes);
 			}
 			break;
 		case 4:
 			jaut4.setText("Kura no šim NAV klase?");
 			jaut5.setText("Kurš no šiem NAV klases vārds? <");
 			jaut6.setText("Kurš no šiem NAV klases objekts?");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				jautRezultats(ramis, 4, skaititajs, atbildes);
 			}
 			break;
 		case 5:
@@ -529,40 +545,163 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut6.setText("Kurš no šiem NAV klases objekts? <");
 			jaut7.setText("Kādu funkciju pilda getteri?");
 			if (enterNospiests==true){	
+				jautRezultats(ramis, 5, skaititajs, atbildes);
 			}
 			break;
 		case 6:
 			jaut6.setText("Kurš no šiem NAV klases objekts?");
 			jaut7.setText("Kādu funkciju pilda getteri? <");
 			jaut8.setText("Kādu funkciju pilda setteri?");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				jautRezultats(ramis, 6, skaititajs, atbildes);
 			}
 			break;
 		case 7:
 			jaut7.setText("Kādu funkciju pilda getteri?");
 			jaut8.setText("Kādu funkciju pilda setteri? <");
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama?");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				jautRezultats(ramis, 7, skaititajs, atbildes);
 			}
 			break;
 		case 8:
 			jaut8.setText("Kādu funkciju pilda setteri?");
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama? <");
 			jaut10.setText("Kurš no šiem ir konstruktora izsaucējs?");
-			if (enterNospiests==true){	
+			if (enterNospiests==true){
+				jautRezultats(ramis, 8, skaititajs, atbildes);
 			}
 			break;
 		case 9:
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama?");
 			jaut10.setText("Kurš no šiem ir konstruktora izsaucējs? <");
 			if (enterNospiests==true){	
+				jautRezultats(ramis, 9, skaititajs, atbildes);
 			}
 			break;
 		}
 	}while(1==1);
 }
-public static void rezultatri(int jautajums, int[] skaititajs, int[] atbildes) {
+public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, int[] atbildes) {
 	
+	String[] jautajumi = {"Kurš no šiem ir objekts?", "Kas ir objekta attribūts?","Kas ir objekta metode?",
+			"Kura no šim NAV klase?","Kurš no šiem NAV klases vārds?","Kurš no šiem NAV klases objekts?",
+			"Kādu funkciju pilda getteri?","Kādu funkciju pilda setteri?",
+			"Kādam jābūt konstruktora nosaukumama?", "Kurš no šiem ir konstruktora izsaucējs?",};
+	String[][] opcijas = { 
+			{"Suns","Skriet","15cm","gulēt"}, 
+			{"Objekta izsaucējs","Informācija par objektu","Rīcība ko objekts var veikt","Objekta nosaukums"},
+			{"Darbība ko objekts var veikt","Objekta izdzēsējs","Darbiba kuru objekts var nozagt","Objekta nosaukums"},
+			{"public class Main","class Ramis extends JFrame","final class A","public void jautajumi()"},
+			{"Dārzeņi","Skolēni","Burkāns","Māšīnas"},
+			{"Nīderlande","Austiņa","Valstis","Valentīns"},
+			{"Tie pārbauda klases","Tie atgriež mainīgo","Ļauj lietotājam ievadīt informāciju","Tie pārstāj programmu"},
+			{"Tie apzog objektus","Tie izveido konstruktorus","Tie iekapsule mainīgo","Tie nosaka mainīgo vērtības"},
+			{"Vienādam ar klases vārdu","Ar mazajiem burtiem","Bez simboliem","Tādām kā pakas nosaukumam"},
+			{"import java.awt.Color;","public class Main","static void jautajumi(int x)","Main myObj = new Main();"}};
+	
+	
+	JLabel Numurs= new JLabel();
+	Numurs.setForeground(Color.WHITE);
+	Numurs.setFont(new Font("", Font.PLAIN, 20));
+	Numurs.setBounds(15,-10,100,100);
+	
+	JLabel Jautajums= new JLabel();
+	Jautajums.setForeground(Color.WHITE);
+	Jautajums.setFont(new Font("", Font.PLAIN, 30));
+	Jautajums.setBounds(15,-200,600,600);
+	
+	JLabel Atbilde1= new JLabel();
+	Atbilde1.setForeground(Color.WHITE);
+	Atbilde1.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde1.setBounds(25,150,250,250);
+	
+	JLabel Atbilde2= new JLabel();
+	Atbilde2.setForeground(Color.WHITE);
+	Atbilde2.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde2.setBounds(25,250,250,250);
+	
+	JLabel Atbilde3= new JLabel();
+	Atbilde3.setForeground(Color.WHITE);
+	Atbilde3.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde3.setBounds(250,150,250,250);
+	
+	JLabel Atbilde4= new JLabel();
+	Atbilde4.setForeground(Color.WHITE);
+	Atbilde4.setFont(new Font("", Font.PLAIN, 15));
+	Atbilde4.setBounds(250,250,250,250);
+	
+	JLabel paLabi= new JLabel();
+	paLabi.setForeground(Color.WHITE);
+	paLabi.setFont(new Font("", Font.PLAIN, 50));
+	paLabi.setText("[D] >");
+	paLabi.setBounds(250,250,250,250);
+	
+	JLabel paKreisi= new JLabel();
+	paKreisi.setForeground(Color.WHITE);
+	paKreisi.setFont(new Font("", Font.PLAIN, 50));
+	paKreisi.setText("< [A]");
+	paKreisi.setBounds(250,250,250,250);
+	
+	JLabel Atpakal= new JLabel();
+	Atpakal.setForeground(Color.WHITE);
+	Atpakal.setFont(new Font("", Font.PLAIN, 40));
+	Atpakal.setText("Atpakal [Esc]");
+	Atpakal.setBounds(250,250,250,250);
+	
+	Numurs.setText(jautajums+".");
+	Jautajums.setText(jautajumi[jautajums]);
+	Atbilde1.setText(opcijas[jautajums][0]+"");
+	Atbilde2.setText(opcijas[jautajums][1]+"");
+	Atbilde3.setText(opcijas[jautajums][2]+"");
+	Atbilde4.setText(opcijas[jautajums][3]+"");
+	
+	do {
+		
+		if(escNospiests==true) {
+			escNospiests=false;
+			ramis.remove(Numurs);
+			ramis.remove(Jautajums);
+			ramis.remove(Atbilde1);
+			ramis.remove(Atbilde2);
+			ramis.remove(Atbilde3);
+			ramis.remove(Atbilde4);
+			ramis.remove(paLabi);
+			ramis.remove(paKreisi);
+			ramis.remove(Atpakal);
+			rezultati(ramis, atbildes);
+			
+		}
+		if(dNospiests==true) {
+			if(jautajums==9) {
+				jautajums=0;
+			}else {
+				jautajums++;
+			}
+			dNospiests=false;
+			Numurs.setText(jautajums+".");
+			Jautajums.setText(jautajumi[jautajums]);
+			Atbilde1.setText(opcijas[jautajums][0]+"");
+			Atbilde2.setText(opcijas[jautajums][1]+"");
+			Atbilde3.setText(opcijas[jautajums][2]+"");
+			Atbilde4.setText(opcijas[jautajums][3]+"");
+		}
+		if(aNospiests==true) {
+			if(jautajums==0) {
+				jautajums=9;
+			}else {
+				jautajums--;
+			}
+			aNospiests=false;
+			Numurs.setText(jautajums+".");
+			Jautajums.setText(jautajumi[jautajums]);
+			Atbilde1.setText(opcijas[jautajums][0]+"");
+			Atbilde2.setText(opcijas[jautajums][1]+"");
+			Atbilde3.setText(opcijas[jautajums][2]+"");
+			Atbilde4.setText(opcijas[jautajums][3]+"");
+		}
+		
+	}while(1==1);
 }
 
 @Override
@@ -583,6 +722,12 @@ public void keyPressed(KeyEvent e) {
 		break;
 	case 83: 
 		sNospiests=true;
+		break;
+	case 68:
+		dNospiests=true;
+		break;
+	case 52:
+		aNospiests=true;
 		break;
 	case 10: 
 			enterNospiests=true;
