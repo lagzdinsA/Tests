@@ -25,7 +25,7 @@ Uzdevumu saraksts:
 - [x] Izveidot jautājumus
 - [x] Izdomat jautajumus
 - [x] Izveidot atbilžu sarakstu
-- [ ] Pievienot mūziku
+- [x] Pievienot mūziku
 <br />
 
 **Atsauces**
