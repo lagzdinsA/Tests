@@ -35,6 +35,8 @@ public class Ramis extends JFrame implements KeyListener {
  
 public static void sakums(JFrame ramis) {
 	int izvele=0;
+	escNospiests=false;
+	enterNospiests=false;
 	JLabel Tituls= new JLabel();
 	Tituls.setText("Tests-OOP");
 	Tituls.setBounds(10,0,200,200);
@@ -137,6 +139,8 @@ public static void paskaidrojums(JFrame ramis) {
 	
 	SwingUtilities.updateComponentTreeUI(ramis);
 	escNospiests=false;
+	enterNospiests=false;
+	
 	JLabel Tituls= new JLabel();
 	Tituls.setText("Paskaidrojums");
 	Tituls.setBounds(150,0,200,200);
@@ -191,6 +195,8 @@ public static void paskaidrojums(JFrame ramis) {
 public static void jautajumi(JFrame ramis) {
 	
 	SwingUtilities.updateComponentTreeUI(ramis);
+	escNospiests=false;
+	enterNospiests=false;
 	
 	int[] atbildes = {0,0,0,0,0,0,0,0,0,0};
 	int jautajums;
@@ -331,6 +337,8 @@ public static void jautajumi(JFrame ramis) {
 
 public static void rezultati(JFrame ramis, int[] atbildes) {
 	SwingUtilities.updateComponentTreeUI(ramis);
+	escNospiests=false;
+	enterNospiests=false;
 	System.out.println(" pirmais");
 	int[] parAtbildes= {1,2,1,4,3,3,2,4,1,4};
 	int[] skaititajs= {0,0,0,0,0,0,0,0,0,0};
@@ -726,6 +734,8 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 }
 public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, int[] atbildes) {
 	SwingUtilities.updateComponentTreeUI(ramis);
+	escNospiests=false;
+	enterNospiests=false;
 	int[] parAtbildes= {1,2,1,4,3,3,2,4,1,4};
 	if(parAtbildes[jautajums]==1) {
 	}
@@ -929,7 +939,6 @@ public void keyTyped(KeyEvent e) {
 @Override
 public void keyPressed(KeyEvent e) {
 	// TODO Auto-generated method stub
-	System.out.println("tests"+e.getKeyCode());
 	enterNospiests=false;
 	switch(e.getKeyCode()) {
 	case 87: 
@@ -945,9 +954,8 @@ public void keyPressed(KeyEvent e) {
 		aNospiests=true;
 		break;
 	case 10: 
-			enterNospiests=true;
-			System.out.println("tests"+e.getKeyCode());
-			break;
+		enterNospiests=true;
+		break;
 	case 27:
 		escNospiests=true;
 		}
