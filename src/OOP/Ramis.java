@@ -20,9 +20,11 @@ public class Ramis extends JFrame implements KeyListener {
 	static boolean dNospiests;
 	static boolean enterNospiests;
 	static boolean escNospiests;
+	static Muzika skanas = new Muzika();
 	
  Ramis(){
-	    this.addKeyListener(this);   
+	 speletMuziku(0);
+	    this.addKeyListener(this);  
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(500,500);
 		this.getContentPane().setBackground(Color.black);
@@ -70,10 +72,12 @@ public static void sakums(JFrame ramis) {
 	do {
 		if(wNospiests==true) {
 			izvele--;
+			speletSE(1);
 			wNospiests=false;
 		}
 		if(sNospiests==true) {
 			izvele++;
+			speletSE(1);
 			sNospiests=false;
 		}
 		
@@ -91,6 +95,7 @@ public static void sakums(JFrame ramis) {
 			Opcijas.setText("Opcijas");
 			Izziet.setText("Izziet");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(Starts);
 				ramis.remove(Opcijas);
@@ -104,6 +109,7 @@ public static void sakums(JFrame ramis) {
 			Opcijas.setText("Opcijas <");
 			Izziet.setText("Izziet");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(Starts);
 				ramis.remove(Opcijas);
@@ -117,6 +123,7 @@ public static void sakums(JFrame ramis) {
 			Opcijas.setText("Opcijas");
 			Izziet.setText("Izziet <");
 			if (enterNospiests==true){
+				speletSE(2);
 				System.exit(0);
 				enterNospiests=false;
 			}
@@ -129,7 +136,7 @@ public static void sakums(JFrame ramis) {
 public static void paskaidrojums(JFrame ramis) {
 	
 	SwingUtilities.updateComponentTreeUI(ramis);
-	
+	escNospiests=false;
 	JLabel Tituls= new JLabel();
 	Tituls.setText("Paskaidrojums");
 	Tituls.setBounds(150,0,200,200);
@@ -174,6 +181,7 @@ public static void paskaidrojums(JFrame ramis) {
 	Paskaidrojums.setText(" ");
 	Paskaidrojums2.setText(" ");
 	Turpinat.setText(" ");	
+	speletSE(2);
 	escNospiests=false;
 	sakums(ramis);	
 	SwingUtilities.updateComponentTreeUI(ramis);		
@@ -247,10 +255,12 @@ public static void jautajumi(JFrame ramis) {
 		do {
 			if(wNospiests==true) {
 				izvele--;
+				speletSE(1);
 				wNospiests=false;
 			}
 			if(sNospiests==true) {
 				izvele++;
+				speletSE(1);
 				sNospiests=false;
 			}
 			if(izvele<0) {
@@ -269,6 +279,7 @@ public static void jautajumi(JFrame ramis) {
 				Atbilde4.setText(opcijas[jautajums][3]+"");
 				//System.out.println(izvele+" pirmais");
 				if (enterNospiests==true){
+					speletSE(2);
 					atbildes[jautajums]=1;
 				}
 				break;
@@ -279,6 +290,7 @@ public static void jautajumi(JFrame ramis) {
 				Atbilde3.setText(opcijas[jautajums][2]+"");
 				Atbilde4.setText(opcijas[jautajums][3]+"");
 				if (enterNospiests==true){
+					speletSE(2);
 					atbildes[jautajums]=2;
 				}
 				break;
@@ -288,6 +300,7 @@ public static void jautajumi(JFrame ramis) {
 				Atbilde3.setText(opcijas[jautajums][2]+" <");
 				Atbilde4.setText(opcijas[jautajums][3]+"");
 				if (enterNospiests==true){
+					speletSE(2);
 					atbildes[jautajums]=3;
 				}
 				break;
@@ -297,6 +310,7 @@ public static void jautajumi(JFrame ramis) {
 				Atbilde3.setText(opcijas[jautajums][2]+"");
 				Atbilde4.setText(opcijas[jautajums][3]+" <");
 				if (enterNospiests==true){
+					speletSE(2);
 					atbildes[jautajums]=4;
 				}
 				break;
@@ -459,10 +473,12 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 	do {
 		if(wNospiests==true) {
 			izvele--;
+			speletSE(1);
 			wNospiests=false;
 		}
 		if(sNospiests==true) {
 			izvele++;
+			speletSE(1);
 			sNospiests=false;
 		}
 		if(izvele<0) {
@@ -472,6 +488,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			izvele=9;
 		}
 		if(escNospiests==true) {
+			speletSE(2);
 			escNospiests=false;
 			ramis.remove(Tituls);
 			ramis.remove(jaut1);
@@ -500,6 +517,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 				jaut1.setText("Kurš no šiem ir objekts? <");
 				jaut2.setText("Kas ir objekta attribūts?");	
 				if (enterNospiests==true){
+					speletSE(2);
 					ramis.remove(Tituls);
 					ramis.remove(jaut1);
 					ramis.remove(jaut2);
@@ -520,6 +538,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 				jaut2.setText("Kas ir objekta attribūts? <");	
 				jaut3.setText("Kas ir objekta metode?");
 				if (enterNospiests==true){
+					speletSE(2);
 					ramis.remove(Tituls);
 					ramis.remove(jaut1);
 					ramis.remove(jaut2);
@@ -540,6 +559,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut3.setText("Kas ir objekta metode? <");
 			jaut4.setText("Kura no šim NAV klase?");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -560,6 +580,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut4.setText("Kura no šim NAV klase? <");
 			jaut5.setText("Kurš no šiem NAV klases vārds?");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -580,6 +601,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut5.setText("Kurš no šiem NAV klases vārds? <");
 			jaut6.setText("Kurš no šiem NAV klases objekts?");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -600,6 +622,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut6.setText("Kurš no šiem NAV klases objekts? <");
 			jaut7.setText("Kādu funkciju pilda getteri?");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -620,6 +643,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut7.setText("Kādu funkciju pilda getteri? <");
 			jaut8.setText("Kādu funkciju pilda setteri?");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -640,6 +664,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut8.setText("Kādu funkciju pilda setteri? <");
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama?");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -660,6 +685,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama? <");
 			jaut10.setText("Kurš no šiem ir konstruktora izsaucējs?");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -679,6 +705,7 @@ public static void rezultati(JFrame ramis, int[] atbildes) {
 			jaut9.setText("Kādam jābūt konstruktora nosaukumama?");
 			jaut10.setText("Kurš no šiem ir konstruktora izsaucējs? <");
 			if (enterNospiests==true){
+				speletSE(2);
 				ramis.remove(Tituls);
 				ramis.remove(jaut1);
 				ramis.remove(jaut2);
@@ -826,6 +853,7 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 			}
 		}
 		if(escNospiests==true) {
+			speletSE(2);
 			escNospiests=false;
 			ramis.remove(Numurs);
 			ramis.remove(Jautajums);
@@ -840,6 +868,7 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 			
 		}
 		if(dNospiests==true) {
+			speletSE(1);
 			if(jautajums==9) {
 				jautajums=0;
 			}else {
@@ -858,6 +887,7 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 			Atbilde4.setForeground(Color.WHITE);
 		}
 		if(aNospiests==true) {
+			speletSE(1);
 			if(jautajums==0) {
 				jautajums=9;
 			}else {
@@ -878,6 +908,17 @@ public static void jautRezultats(JFrame ramis, int jautajums, int[] skaititajs, 
 	}while(1==1);
 }
 
+public void speletMuziku(int i) {
+	
+	skanas.noteiktFailu(i);
+	skanas.spelet();
+	skanas.loop();
+}
+public static void speletSE(int i) {
+		skanas.noteiktFailu(i);
+
+		skanas.spelet();
+}
 @Override
 public void keyTyped(KeyEvent e) {
 	// TODO Auto-generated method stub
